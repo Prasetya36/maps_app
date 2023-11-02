@@ -4,7 +4,7 @@ import 'package:animated_rail/animated_rail/animated_rail.dart';
 import 'package:animated_rail/animated_rail/rail_item.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:maps_app/Widget/User.dart';
+import 'package:maps_app/Pages/Home.dart';
 
 void main() {
   runApp(const MainApp());
@@ -16,6 +16,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: MapSample(),
     );
   }
@@ -33,33 +34,35 @@ class MapSampleState extends State<MapSample> {
       Completer<GoogleMapController>();
 
   static const CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(-6.7287963889926115, 108.54707757971818),
+    target: LatLng(-6.728907599857669, 108.54712049506095),
     zoom: 14.4746,
   );
 
   Widget _home() {
     return Scaffold(
-      body: Center(
-        child: GoogleMap(initialCameraPosition: _kGooglePlex, ),
-        
-      ),
-    );
+        body: GoogleMap(
+      initialCameraPosition: _kGooglePlex,
+      markers: {
+        Marker(
+            markerId: MarkerId("Icon+"),
+            position: LatLng(-6.728907599857669, 108.54712049506095),
+            ),
+      },
+    ));
   }
 
   Widget _Teknisi() {
-    return Center(
-      child: Text(
-        "Build Test",
-        style: TextStyle(color: Colors.amber),
+    return const Scaffold(
+      body: GoogleMap(
+        initialCameraPosition: _kGooglePlex,
       ),
     );
   }
 
   Widget _AE() {
-    return Center(
-      child: Text(
-        "Coba",
-        style: TextStyle(color: Colors.amber),
+    return const Scaffold(
+      body: GoogleMap(
+        initialCameraPosition: _kGooglePlex,
       ),
     );
   }
@@ -76,35 +79,32 @@ class MapSampleState extends State<MapSample> {
           },
         ),
         Stack(children: [
-          Center(
-            child: AnimatedRail(
-              background: Colors.indigo[300],
-              maxWidth: 165,
-              width: 60,
-              railTileConfig: RailTileConfig(
-                iconSize: 24,
-                iconColor: Colors.white,
-                expandedTextStyle: TextStyle(fontSize: 15,  ),
-                collapsedTextStyle:
-                    TextStyle(fontSize: 12, color: Colors.white),
-                activeColor: Colors.indigo,
-                iconPadding: EdgeInsets.only(bottom: 25),
-                hideCollapsedText: true,
+          AnimatedRail(
+            background: Colors.indigo[300],
+            maxWidth: 165,
+            width: 60,
+            railTileConfig: const RailTileConfig(
+              iconSize: 24,
+              iconColor: Colors.white,
+              expandedTextStyle: TextStyle(
+                fontSize: 15,
               ),
-              cursorSize: Size(70, 70),
-              cursorActionType: CursorActionTrigger.clickAndDrag,
-              items: [
-                RailItem(icon: Icon(Icons.home), label: "Home", screen: _home()),
-                RailItem(
-                    icon: Icon(Icons.message_outlined),
-                    label: 'Messages',
-                    screen: _Teknisi()),
-                RailItem(
-                    icon: Icon(Icons.notifications),
-                    label: "Notification",
-                    screen: _AE()),
-              ],
+              activeColor: Colors.indigo,
+              hideCollapsedText: true,
             ),
+            cursorSize: Size(70, 75),
+            cursorActionType: CursorActionTrigger.clickAndDrag,
+            items: [
+              RailItem(icon: Icon(Icons.home), label: "Home", screen: _home()),
+              RailItem(
+                  icon: Icon(Icons.person_4_outlined),
+                  label: 'Teknisi',
+                  screen: _Teknisi()),
+              RailItem(
+                  icon: Icon(Icons.person_2_rounded),
+                  label: "AE",
+                  screen: _AE()),
+            ],
           )
         ]),
         Stack(
@@ -112,7 +112,7 @@ class MapSampleState extends State<MapSample> {
             Container(
               alignment: Alignment.center,
               padding: EdgeInsets.only(top: 700),
-              child: User(),
+              child: Home(),
             )
           ],
         )
