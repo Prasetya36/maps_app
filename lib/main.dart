@@ -45,14 +45,6 @@ class MapSampleState extends State<MapSample> {
           initialCameraPosition: _kGooglePlex,
           onMapCreated: (GoogleMapController controller) {
             _controller.complete(controller);
-          Marker(
-  markerId: const MarkerId("marker1"),
-  position: const LatLng(-6.7287963889926115, 108.54707757971818),
-  draggable: true,
-  onDragEnd: (value) {
-
-  },
-);
           },
         ),
         Stack(children: [ 
