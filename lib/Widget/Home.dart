@@ -38,10 +38,10 @@ class MapSampleState extends State<MapSample> {
   );
 
   Widget _home() {
-    return Scaffold(
-      body: Center(
-        child: GoogleMap(initialCameraPosition: _kGooglePlex, ),
-        
+    return Center(
+      child: Text(
+        "Build Test",
+        style: TextStyle(color: Colors.amber),
       ),
     );
   }
@@ -79,16 +79,17 @@ class MapSampleState extends State<MapSample> {
           Center(
             child: AnimatedRail(
               background: Colors.indigo[300],
-              maxWidth: 165,
+              maxWidth: 175,
               width: 60,
-              railTileConfig: RailTileConfig(
-                iconSize: 24,
+              direction: TextDirection.rtl,
+              railTileConfig: const RailTileConfig(
+                iconSize: 22,
                 iconColor: Colors.white,
-                expandedTextStyle: TextStyle(fontSize: 15,  ),
+                expandedTextStyle: TextStyle(fontSize: 15),
                 collapsedTextStyle:
                     TextStyle(fontSize: 12, color: Colors.white),
                 activeColor: Colors.indigo,
-                iconPadding: EdgeInsets.only(bottom: 25),
+                iconPadding: EdgeInsets.symmetric(vertical: 5),
                 hideCollapsedText: true,
               ),
               cursorSize: Size(70, 70),
