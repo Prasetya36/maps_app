@@ -9,11 +9,11 @@ class Home extends StatelessWidget {
         height: 80,
         width: 277,
         decoration: ShapeDecoration(
-          color: Color.fromARGB(172, 217, 217, 217),
+          color: const Color.fromARGB(172, 217, 217, 217),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
           ),
-          shadows: [
+          shadows: const [
             BoxShadow(
                 color: Color(0x3F000000),
                 blurRadius: 4,
@@ -30,8 +30,9 @@ class Home extends StatelessWidget {
             Container(
               width: 60,
               height: 50,
-              margin: EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
-              decoration: ShapeDecoration(
+              margin:
+                  const EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
+              decoration: const ShapeDecoration(
                 color: Color(0xFF666666),
                 shape: OvalBorder(),
               ),
@@ -39,8 +40,9 @@ class Home extends StatelessWidget {
             Container(
               width: 60,
               height: 50,
-              margin: EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
-              decoration: ShapeDecoration(
+              margin:
+                  const EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
+              decoration: const ShapeDecoration(
                 color: Color(0xFF666666),
                 shape: OvalBorder(),
               ),
@@ -48,8 +50,9 @@ class Home extends StatelessWidget {
             Container(
               width: 60,
               height: 50,
-              margin: EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
-              decoration: ShapeDecoration(
+              margin:
+                  const EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
+              decoration: const ShapeDecoration(
                 color: Color(0xFF666666),
                 shape: OvalBorder(),
               ),
@@ -57,8 +60,9 @@ class Home extends StatelessWidget {
             Container(
               width: 60,
               height: 50,
-              margin: EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
-              decoration: ShapeDecoration(
+              margin:
+                  const EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
+              decoration: const ShapeDecoration(
                 color: Color(0xFF666666),
                 shape: OvalBorder(),
               ),
@@ -66,8 +70,9 @@ class Home extends StatelessWidget {
             Container(
               width: 60,
               height: 50,
-              margin: EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
-              decoration: ShapeDecoration(
+              margin:
+                  const EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
+              decoration: const ShapeDecoration(
                 color: Color(0xFF666666),
                 shape: OvalBorder(),
               ),
@@ -75,8 +80,9 @@ class Home extends StatelessWidget {
             Container(
               width: 60,
               height: 50,
-              margin: EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
-              decoration: ShapeDecoration(
+              margin:
+                  const EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
+              decoration: const ShapeDecoration(
                 color: Color(0xFF666666),
                 shape: OvalBorder(),
               ),
@@ -84,8 +90,9 @@ class Home extends StatelessWidget {
             Container(
               width: 60,
               height: 50,
-              margin: EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
-              decoration: ShapeDecoration(
+              margin:
+                  const EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
+              decoration: const ShapeDecoration(
                 color: Color(0xFF666666),
                 shape: OvalBorder(),
               ),
@@ -93,8 +100,9 @@ class Home extends StatelessWidget {
             Container(
               width: 60,
               height: 50,
-              margin: EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
-              decoration: ShapeDecoration(
+              margin:
+                  const EdgeInsets.only(left: 3, right: 3, top: 10, bottom: 10),
+              decoration: const ShapeDecoration(
                 color: Color(0xFF666666),
                 shape: OvalBorder(),
               ),

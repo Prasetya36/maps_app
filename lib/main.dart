@@ -43,10 +43,10 @@ class MapSampleState extends State<MapSample> {
         body: GoogleMap(
       initialCameraPosition: _kGooglePlex,
       markers: {
-        Marker(
-            markerId: MarkerId("Icon+"),
-            position: LatLng(-6.728907599857669, 108.54712049506095),
-            ),
+        const Marker(
+          markerId: MarkerId("Icon+"),
+          position: LatLng(-6.728907599857669, 108.54712049506095),
+        ),
       },
     ));
   }
@@ -92,16 +92,17 @@ class MapSampleState extends State<MapSample> {
               activeColor: Colors.indigo,
               hideCollapsedText: true,
             ),
-            cursorSize: Size(70, 75),
+            cursorSize: const Size(70, 75),
             cursorActionType: CursorActionTrigger.clickAndDrag,
             items: [
-              RailItem(icon: Icon(Icons.home), label: "Home", screen: _home()),
               RailItem(
-                  icon: Icon(Icons.person_4_outlined),
+                  icon: const Icon(Icons.home), label: "Home", screen: _home()),
+              RailItem(
+                  icon: const Icon(Icons.person_4_outlined),
                   label: 'Teknisi',
                   screen: _Teknisi()),
               RailItem(
-                  icon: Icon(Icons.person_2_rounded),
+                  icon: const Icon(Icons.person_2_rounded),
                   label: "AE",
                   screen: _AE()),
             ],
@@ -111,8 +112,8 @@ class MapSampleState extends State<MapSample> {
           children: [
             Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.only(top: 700),
-              child: Home(),
+              padding: const EdgeInsets.only(top: 700),
+              child: const Home(),
             )
           ],
         )
